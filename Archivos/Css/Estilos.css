@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+@import 'mediaqueries.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    height: 104px;
+    box-shadow: 0px 3px 15px -2px rgb(0, 0, 0, .6);
+    max-width: 100%;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    padding: 30px;
+}
+
+.navbar .brand {
+    margin-top: 10px;
+}
+
+.navbar .menu {
+    grid-column: 6 / 9;
+    display: flex;
+    margin-top: 23px;
+}
+
+.menu li {
+    list-style: none;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    margin-right: 2em;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 200;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all .7s;
+}
+
+.menu li a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.menu-bar {
+    display: none;
+}
+
+/* Main section */
+
+.main {
+    display:block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main {
+    padding: 3vw;
+}
+
+.content-info {
+    margin-top: 2em;
+    color: black;
+}
+
+.h1-parte-1 {
+    font-size: 5em;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    transition: all .7s;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+button:hover {
+    box-shadow: 0px 3px 15px -2px rgb(0, 0, 0, .6);
+    transform: scale(1.05);
+}
+
+.btn-toBuy, .read-more {
+    background-color: black;
+    padding: 8px 40px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+}
+
+.read-more {
+    background: none;
+    border: 1px solid black;
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/* Pie de página*/
+
+.pie-página {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+.pie-página .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-página .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+}
+
+.pie-página .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    background-color: none;
+    border-radius: 50px;
+    transition: all .7s ease;
+}
+
+.pie-página .grupo-1 .box h2:hover {
+    font-size: 23px;
+}
+
+.pie-página .grupo-1 .box .Texto-TONYS-CHANNEL h2 {
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-página .grupo-1 .box p {
+    color: #CFCFCF;
+    margin-bottom: 10px;
+}
+
+.pie-página .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #CFCFCF;
+    margin-right: 10px;
+    background-color: none;
+    border-radius: 50px;
+    text-align: center;
+    transition: all .7s;
+}
+
+.pie-página .grupo-1 .red-social a:hover {
+    border-radius: 50px;
+    background-color: #696969;
+    color: white;
+}
+
+
+.pie-página .grupo-2 {
+    color: #696969;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 15px;
+    transition: all .7s;
+}
+
+.pie-página .grupo-2:hover {
+    color: white;
+}
+
+/* Miniaturas */
+
+.Miniaturas {
+    color: black;
+}
+
+.contenedor {
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+.contenedor:hover {
+    transform: scale(1.05);
+}
+
+.contenedor figure {
+    position: relative;
+    height: 287px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 3px 50px 0px rgb(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.contenedor figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter:blur(3px);
+    background: #000000b7;
+    transition: all .5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover > .capa h1 {
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.contenedor figure .capa h1 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all .5s ease-out;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.contenedor figure .capa p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 220px;
+    margin: auto;
+    font-weight: 100;
+}
+
+/* contenedor 1 */
+
+.contenedor-1 {
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+.contenedor-1:hover {
+    transform: scale(1.05);
+}
+
+.contenedor-1 figure {
+    position: relative;
+    height: 750px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 3px 50px 0px rgb(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.contenedor-1 figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor-1 figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter:blur(3px);
+    background: #000000b7;
+    transition: all .5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor-1 figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-1 figure:hover > .capa h1 {
+    margin-top: 320px;
+    margin-bottom: 10px;
+}
+
+.contenedor-1 figure .capa h1 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all .5s ease-out;
+    margin-top: 280px;
+    font-weight: 400;
+}
+
+.contenedor-1 figure .capa p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 220px;
+    margin: auto;
+    font-weight: 100;
+}
+
+/* Botón ir arriba */
+
+.go-top-container {
+    position: fixed;
+    bottom: 4px;
+    right: 4px;
+    width: 66px;
+    height: 66px;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0px;
+    height: 0px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .15s;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    box-shadow: 0px 3px 50px 0px rgb(0, 0, 0, .3);
+}
+
+.go-top-button i {
+    position: absolute;
+    font-size: 30px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    transition: all .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .3s ease-out;
+    width: 70px;
+    height: 70px;
+    z-index: 11;    
+}
+
+.show i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0px;
+        height: 0rem;
+    }
+    50% {
+        width: 84px;
+        height: 84px;
+    }
+    100%{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.go-top-button:hover {
+    width: 75px;
+    height: 75px;
+}
+
+/* montajes */
+
+.main .content-info .videos {
+    margin-bottom: 100px;
+}
+
+/* Formulario */
+
+.form {
+    background-color: rgb(0, 0, 0);
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    transition: all .7s;
+}
+
+.form:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 50px 0px rgb(0, 0, 0, .3);
+}
+
+.Formulario {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.form__container {
+    width: 100%;
+    display: grid;
+    gap: .1em;
+    grid-auto-columns: 100%;
+}
+
+.form__input {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+    padding: .8em 1em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+.form__input__1 {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+    padding: .8em 1em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    transition: all .4s ease-out;
+    margin-bottom: .7em;
+}
+
+.form__input:hover {
+    transform: scale(1.05);
+}
+
+.form__input--message {
+    resize: none;
+    padding: 1.8em 1em;
+}
+
+.form__cta {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+    padding: .8em 1em;
+    border-radius: 50vh;
+    border: none;
+    outline: none;
+    transition: all .6s ease-out;
+    cursor: pointer;
+    width: 50%;
+    margin: auto;
+    background-color:#696969;
+}
+
+.form__cta:hover {
+    transform: scale(1.05);
+    width: 75%;
+    background-color:#CFCFCF;
+}
+
+@media (max-width:450px) {
+    .form {
+        padding: 3.5rem 1em;
+    }
+}
+
+.h1_parte_XD {
+    margin-top: 5vh;
+    font-size: 5em;
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin-bottom: 3vh;
+}
+
+.btn-toBuyy {
+    background-color: black;
+    padding: 8px 40px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    margin-bottom: 10vh;
+}
+
+.Hol4 {
+    margin-bottom: 3vh;
+}
